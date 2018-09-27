@@ -1,0 +1,10 @@
+version: '3'
+services:
+    nlp_api:
+        image: 127.0.0.1:5000/nlp_api
+        build: .
+        ports:
+            - "5500:5500"
+        deploy:
+            mode: replicated
+            replicas: 2
